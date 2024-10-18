@@ -1,0 +1,113 @@
+
+entity User {
+	userID Integer
+    userName String
+    password String
+    role String
+}
+
+entity Caregiver {
+	employeeID Integer
+    name String
+    gender String
+    age Integer
+    contactNumber String
+    departmentPosition String
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Elderly {
+	elderlyId Integer
+	caregiverId Integer
+	name String
+    gender String
+    age Integer
+    idNumber String
+    contactNumber String
+    homeAddress String
+    healthStatus String
+    admissionDate Instant
+    dischargeDate Instant
+}
+
+entity Visitor {
+	visitorId Integer
+    visitorName String
+    socialRelationships String
+    visitDate Instant
+}
+
+/**
+ * Task entity.
+ * @author The JHipster team.
+ */
+entity Room {
+	roomNumber Integer
+    bedId String
+    bedType String
+    status String   
+}
+
+/**
+ * The Employee entity.
+ */
+entity Catering  {
+	/**
+	* The firstname attribute.
+	*/
+	cateringId String
+	date Instant
+	breakfast String
+	lunch String
+	dinner String
+	specialRequirements String
+}
+
+entity HealthRecord {
+	healthId Integer
+	elderlyId Integer
+	examinationDate Instant
+    examinationStatus String
+    doctorAdvice String
+}
+
+entity ElderlyRegistration {
+	leaveId Integer
+	elderlyId Integer
+	leaveType String
+    leaveTime Instant
+    approvalStatus String
+    }
+entity EmployeeRegistration {
+	leaveId Integer
+	employeeId Integer
+	leaveType String
+    leaveTime Instant
+    approvalStatus String
+}
+
+entity Financial {
+    feeId Integer
+    eldrlyId Integer
+    feeType  String
+    amount Long
+    paymentTime Instant
+}
+entity Salary {
+    salaryId Integer
+    emplyeeId Integer
+    salaryAmount Long
+    paymentTime Instant
+}
+entity Notification{
+    notificationId Integer
+    title String
+    content String
+    releaseTime Instant
+}
+
+
+
+
+
